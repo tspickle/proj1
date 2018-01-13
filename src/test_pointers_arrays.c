@@ -41,7 +41,8 @@ char * test_array_sort1() {
     int len = array_len(theArray);
     array_sort(theArray, len);
     int result = 1;
-    for (int i=0; (i<len) && result; i++) {
+    int i=0;
+    for (i=0; (i<len) && result; i++) {
         result = result && (theArray[i] == theStaticArray[sortedIndices[i]]);
     }
     mu_assert("sort1 failed", result);
@@ -52,7 +53,8 @@ char * test_array_sort2() {
     int len = array_len(theArray);
     array_sort2(theArray, len);
     int result = 1;
-    for (int i=0; (i<len) && result; i++) {
+    int i=0;
+    for (i=0; (i<len) && result; i++) {
         result = result && (theArray[i] == theStaticArray[sortedIndices[i]]);
     }
     mu_assert("sort2 failed", result);
